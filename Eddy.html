@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eddy's | Curtains, Blinds, Pillows & Bedding</title>
+<meta name="description" content="Eddy's — Nigeria's home of quality curtains, blinds, pillows, pillowcases, bedsheets, poles and rings. In God We Trust.">
+<meta name="keywords" content="curtains Lagos, blinds Nigeria, pillows Nigeria, bedsheets Lagos, curtain poles, curtain rings, Eddy's curtains">
+<meta property="og:title" content="Eddy's | Home of Quality Curtains, Pillows & Blinds">
+<meta property="og:description" content="Curtains, blinds, pillows, pillowcases, bedsheets, poles, rings and more. Serving Nigeria with excellence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C9A96E;--gold-light:#E8D5B0;--gold-dark:#8B6F42;--charcoal:#1C1C1C;--charcoal-mid:#2E2E2E;--charcoal-soft:#3D3D3D;--off-white:#F9F6F1;--warm-gray:#8A8278;--border:rgba(201,169,110,0.25);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--charcoal);color:var(--off-white);overflow-x:hidden;font-weight:300;line-height:1.7}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5%;transition:all 0.4s ease}
+nav.scrolled{background:rgba(28,28,28,0.97);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);padding:0.8rem 5%}
+.nav-logo{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--gold);letter-spacing:0.05em;text-decoration:none}
+.nav-logo span{font-style:italic;font-weight:300;color:var(--gold-light);display:block;letter-spacing:0.12em;font-size:0.52rem;text-transform:uppercase}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:rgba(249,246,241,0.8);text-decoration:none;font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--charcoal)!important;padding:0.5rem 1.4rem!important;font-weight:500!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:22px;height:1px;background:var(--gold);transition:all 0.3s}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(28,28,28,0.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--off-white);text-decoration:none;font-family:var(--serif);font-size:2rem;font-weight:400;transition:color 0.3s}
+.mobile-menu a:hover{color:var(--gold)}
+.mobile-close{position:absolute;top:1.5rem;right:5%;background:none;border:none;color:var(--gold);font-size:2rem;cursor:pointer}
+#home{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:8rem 5% 5rem 7%;position:relative;z-index:2}
+.hero-tag{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.hero-tag::before{content:'';display:block;width:40px;height:0.5px;background:var(--gold)}
+.hero-title{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;line-height:1.1;color:var(--off-white);margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--gold);font-weight:300}
+.hero-sub{color:var(--warm-gray);font-size:0.9rem;max-width:380px;margin-bottom:3rem;line-height:1.8}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--charcoal);padding:0.9rem 2.2rem;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;text-decoration:none;display:inline-block;transition:all 0.3s}
+.btn-primary:hover{background:var(--gold-light)}
+.btn-outline{border:0.5px solid var(--gold);color:var(--gold);padding:0.9rem 2.2rem;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:400;text-decoration:none;display:inline-block;transition:all 0.3s}
+.btn-outline:hover{background:rgba(201,169,110,0.1)}
+.hero-stats{display:flex;gap:3rem;margin-top:4rem;padding-top:2rem;border-top:0.5px solid var(--border)}
+.stat-num{font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1}
+.stat-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--warm-gray);margin-top:0.3rem}
+.hero-right{position:relative;overflow:hidden}
+.hero-right::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--charcoal) 0%,transparent 30%);z-index:1}
+.hero-img-grid{display:grid;grid-template-rows:1fr 1fr;height:100%;gap:3px}
+.hero-img-item{overflow:hidden;position:relative}
+.hero-img-item img{width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(0.9);transition:transform 8s ease}
+.hero-img-item:hover img{transform:scale(1.05)}
+.hero-scroll{position:absolute;bottom:3rem;left:7%;display:flex;align-items:center;gap:1rem;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--warm-gray);z-index:3}
+.scroll-line{width:40px;height:0.5px;background:var(--warm-gray);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%,100%{width:40px}50%{width:70px}}
+section{padding:6rem 7%}
+.section-tag{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem}
+.section-tag::before{content:'';display:block;width:30px;height:0.5px;background:var(--gold)}
+.section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.15;color:var(--off-white);margin-bottom:1rem}
+.section-title em{font-style:italic;color:var(--gold)}
+.section-sub{color:var(--warm-gray);font-size:0.9rem;max-width:540px;line-height:1.8}
+.marquee-section{border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);padding:1.2rem 0;overflow:hidden;background:var(--charcoal-mid)}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 30s linear infinite}
+.marquee-item{display:inline-flex;align-items:center;gap:1.5rem;padding:0 2rem;font-family:var(--serif);font-size:0.9rem;font-style:italic;color:var(--warm-gray);letter-spacing:0.05em}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+#about{background:var(--charcoal-mid);display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.about-visual{position:relative}
+.about-img-main{width:100%;aspect-ratio:3/4;object-fit:cover;filter:brightness(0.85) saturate(0.9)}
+.about-img-accent{position:absolute;bottom:-2rem;right:-2rem;width:55%;aspect-ratio:1/1;object-fit:cover;border:4px solid var(--charcoal-mid);filter:brightness(0.9) saturate(0.8)}
+.about-badge{position:absolute;top:2rem;left:-2rem;background:var(--gold);color:var(--charcoal);padding:1.5rem;text-align:center;font-family:var(--serif)}
+.about-badge-num{font-size:2.5rem;font-weight:600;line-height:1;display:block}
+.about-badge-text{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;display:block}
+.about-motto{font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--gold);margin:1.5rem 0;display:flex;align-items:center;gap:1rem}
+.about-motto::before,.about-motto::after{content:'';flex:1;height:0.5px;background:var(--border)}
+.values-list{list-style:none;margin-top:2rem}
+.values-list li{display:flex;align-items:flex-start;gap:1rem;padding:0.8rem 0;border-bottom:0.5px solid var(--border);font-size:0.9rem;color:var(--warm-gray)}
+.values-list li::before{content:'✦';color:var(--gold);font-size:0.6rem;margin-top:0.4rem;flex-shrink:0}
+#collections{background:var(--charcoal)}
+.collections-header{margin-bottom:2.5rem}
+.cat-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.cat-tab{font-family:var(--sans);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.5rem 1.2rem;cursor:pointer;border:0.5px solid var(--border);color:var(--warm-gray);background:none;transition:all 0.3s}
+.cat-tab:hover{border-color:var(--gold);color:var(--gold)}
+.cat-tab.active{background:var(--gold);color:var(--charcoal);border-color:var(--gold)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5px}
+.product-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer;background:var(--charcoal-soft)}
+.product-card.hidden{display:none}
+.product-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;filter:brightness(0.6) saturate(0.8)}
+.product-card:hover img{transform:scale(1.08);filter:brightness(0.45) saturate(0.8)}
+.product-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;background:linear-gradient(to top,rgba(28,28,28,0.95) 0%,rgba(28,28,28,0.3) 50%,transparent 100%)}
+.product-category{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.product-name{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--off-white);margin-bottom:0.5rem;line-height:1.2}
+.product-desc{font-size:0.8rem;color:rgba(249,246,241,0.6);line-height:1.6;margin-bottom:1.2rem;max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.product-card:hover .product-desc{max-height:80px}
+.product-features{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem;opacity:0;transition:opacity 0.4s ease}
+.product-card:hover .product-features{opacity:1}
+.feature-tag{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;border:0.5px solid var(--border);color:var(--gold-light);padding:0.25rem 0.6rem}
+.product-cta{display:flex;justify-content:space-between;align-items:center}
+.product-price{font-size:0.7rem;color:var(--warm-gray);letter-spacing:0.1em}
+.product-btn{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:gap 0.3s}
+.product-btn:hover{gap:0.8rem}
+#why{background:var(--charcoal-mid)}
+.why-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;align-items:center;margin-top:3rem}
+.why-visual{position:relative}
+.why-visual img{width:100%;aspect-ratio:2/3;object-fit:cover;filter:brightness(0.8) saturate(0.85)}
+.why-quote{position:absolute;bottom:-1.5rem;left:-1.5rem;right:1.5rem;background:var(--charcoal);padding:1.5rem;border-left:2px solid var(--gold)}
+.why-quote p{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--off-white);line-height:1.6}
+.why-quote cite{display:block;margin-top:0.8rem;font-style:normal;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
+.features-list{list-style:none}
+.feature-item{display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.5rem 0;border-bottom:0.5px solid var(--border);align-items:start}
+.feature-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold);line-height:1;opacity:0.6}
+.feature-content h4{font-family:var(--sans);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--off-white);font-weight:500;margin-bottom:0.4rem}
+.feature-content p{font-size:0.85rem;color:var(--warm-gray);line-height:1.7}
+#services{background:var(--charcoal)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;margin-top:3.5rem;background:var(--border)}
+.service-card{background:var(--charcoal);padding:2.5rem;transition:background 0.3s}
+.service-card:hover{background:var(--charcoal-mid)}
+.service-icon{font-size:2rem;margin-bottom:1.5rem;color:var(--gold);font-family:var(--serif)}
+.service-name{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--off-white);margin-bottom:0.8rem;line-height:1.3}
+.service-desc{font-size:0.85rem;color:var(--warm-gray);line-height:1.7}
+.service-link{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.2rem;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:gap 0.3s}
+.service-link:hover{gap:0.8rem}
+#gallery{background:var(--charcoal-mid)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,200px);gap:3px;margin-top:3rem}
+.gallery-item{overflow:hidden;position:relative;cursor:zoom-in}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease,filter 0.4s;filter:brightness(0.75) saturate(0.85)}
+.gallery-item:hover img{transform:scale(1.08);filter:brightness(0.6) saturate(0.9)}
+.gallery-item.span-2{grid-column:span 2}
+.gallery-item.span-row-2{grid-row:span 2}
+.gallery-label{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.2rem;background:linear-gradient(to top,rgba(28,28,28,0.9),transparent);font-size:0.75rem;color:var(--gold-light);letter-spacing:0.1em;text-transform:uppercase;transform:translateY(100%);transition:transform 0.4s ease}
+.gallery-item:hover .gallery-label{transform:translateY(0)}
+#testimonials{background:var(--charcoal)}
+.testimonials-wrapper{position:relative;overflow:hidden;margin-top:3.5rem}
+.testimonials-track{display:flex;transition:transform 0.6s ease}
+.testimonial-card{min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.testimonial-quote{font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:300;font-style:italic;color:var(--off-white);line-height:1.5;border-left:2px solid var(--gold);padding-left:2rem}
+.testimonial-marks{font-family:var(--serif);font-size:5rem;font-weight:300;color:var(--gold);opacity:0.3;line-height:0.5;display:block;margin-bottom:1rem}
+.testimonial-author{padding-left:2rem}
+.author-name{font-family:var(--sans);font-size:0.85rem;font-weight:500;color:var(--off-white);letter-spacing:0.1em;text-transform:uppercase}
+.author-loc{font-size:0.75rem;color:var(--warm-gray);margin-top:0.3rem}
+.stars{color:var(--gold);font-size:0.75rem;margin:0.8rem 0;display:flex;gap:3px}
+.testimonial-img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:brightness(0.8) saturate(0.8)}
+.testimonials-nav{display:flex;gap:1rem;justify-content:center;margin-top:2.5rem}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--charcoal-soft);cursor:pointer;transition:all 0.3s;border:0.5px solid var(--border)}
+.nav-dot.active{background:var(--gold);width:24px;border-radius:3px}
+#faq{background:var(--charcoal-mid)}
+.faq-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;margin-top:1rem;align-items:start}
+.faq-item{border-bottom:0.5px solid var(--border)}
+.faq-q{width:100%;background:none;border:none;color:var(--off-white);text-align:left;padding:1.5rem 0;font-family:var(--sans);font-size:0.9rem;font-weight:400;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color 0.3s}
+.faq-q:hover,.faq-q.open{color:var(--gold)}
+.faq-icon{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform 0.3s}
+.faq-q.open .faq-icon{transform:rotate(45deg)}
+.faq-a{font-size:0.85rem;color:var(--warm-gray);line-height:1.8;max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s}
+.faq-a.open{max-height:200px;padding-bottom:1.5rem}
+.cta-banner{background:var(--gold);padding:5rem 7%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-banner-text h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--charcoal);line-height:1.2}
+.cta-banner-text p{font-size:0.9rem;color:var(--charcoal-soft);margin-top:0.5rem}
+.btn-dark{background:var(--charcoal);color:var(--off-white);padding:1rem 2.5rem;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;text-decoration:none;display:inline-block;transition:all 0.3s;white-space:nowrap}
+.btn-dark:hover{background:var(--charcoal-mid)}
+#contact{background:var(--charcoal)}
+.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:6rem;margin-top:3rem}
+.contact-info h3{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--off-white);margin-bottom:1.5rem}
+.contact-item{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem 0;border-bottom:0.5px solid var(--border)}
+.contact-item-icon{width:36px;height:36px;background:rgba(201,169,110,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;flex-shrink:0;font-family:var(--serif)}
+.contact-item-label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--warm-gray);margin-bottom:0.3rem}
+.contact-item-value{font-size:0.9rem;color:var(--off-white)}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group label{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--warm-gray)}
+.form-group input,.form-group select,.form-group textarea{background:var(--charcoal-mid);border:0.5px solid var(--border);color:var(--off-white);padding:0.9rem 1rem;font-family:var(--sans);font-size:0.85rem;font-weight:300;outline:none;transition:border-color 0.3s;-webkit-appearance:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group select{color:var(--warm-gray)}
+.form-group select option{background:var(--charcoal-mid);color:var(--off-white)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{background:var(--gold);color:var(--charcoal);border:none;padding:1rem 2.5rem;font-family:var(--sans);font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background 0.3s;align-self:flex-start}
+.form-submit:hover{background:var(--gold-light)}
+footer{background:var(--charcoal-mid);border-top:0.5px solid var(--border);padding:4rem 7% 2rem}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:0.5px solid var(--border)}
+.footer-brand p{font-size:0.85rem;color:var(--warm-gray);line-height:1.7;margin-top:1rem}
+.footer-social{display:flex;gap:0.8rem;margin-top:1.5rem}
+.social-link{width:36px;height:36px;border:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--warm-gray);font-size:0.7rem;text-decoration:none;transition:all 0.3s;font-family:var(--sans)}
+.social-link:hover{border-color:var(--gold);color:var(--gold)}
+.footer-col h4{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.8rem}
+.footer-col a{color:var(--warm-gray);text-decoration:none;font-size:0.85rem;transition:color 0.3s}
+.footer-col a:hover{color:var(--off-white)}
+.newsletter-form{display:flex;gap:0.5rem;margin-top:1rem}
+.newsletter-form input{flex:1;background:var(--charcoal);border:0.5px solid var(--border);color:var(--off-white);padding:0.7rem 1rem;font-family:var(--sans);font-size:0.8rem;outline:none}
+.newsletter-form button{background:var(--gold);color:var(--charcoal);border:none;padding:0.7rem 1rem;cursor:pointer;font-size:0.7rem;font-family:var(--sans);letter-spacing:0.1em;text-transform:uppercase;font-weight:500;transition:background 0.3s}
+.newsletter-form button:hover{background:var(--gold-light)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;font-size:0.75rem;color:var(--warm-gray);flex-wrap:wrap;gap:1rem}
+.footer-motto{font-family:var(--serif);font-style:italic;color:var(--gold)}
+.whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:white;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.3s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.whatsapp-float svg{width:28px;height:28px}
+.wa-tooltip{position:absolute;right:68px;background:var(--charcoal);color:var(--off-white);font-size:0.75rem;white-space:nowrap;padding:0.5rem 1rem;pointer-events:none;opacity:0;transition:opacity 0.3s;border:0.5px solid var(--border)}
+.whatsapp-float:hover .wa-tooltip{opacity:1}
+.wa-pulse{position:absolute;top:0;right:0;width:14px;height:14px;background:#FF4444;border-radius:50%;border:2px solid var(--charcoal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:900px){
+  nav{padding:1rem 5%}.nav-links{display:none}.hamburger{display:flex}
+  #home{grid-template-columns:1fr;min-height:auto}.hero-left{padding:7rem 5% 3rem}
+  .hero-right,.hero-scroll{display:none}
+  #about{grid-template-columns:1fr;gap:3rem}.about-visual{display:none}
+  .why-grid{grid-template-columns:1fr;gap:3rem}.why-visual{display:none}
+  .testimonial-card{grid-template-columns:1fr}.testimonial-img{display:none}
+  .contact-layout{grid-template-columns:1fr;gap:3rem}.form-row{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}.faq-layout{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gallery-item.span-2{grid-column:span 2}.gallery-item.span-row-2{grid-row:span 1}
+  section{padding:4rem 5%}.cta-banner{padding:3.5rem 5%}footer{padding:3rem 5% 2rem}
+}
+@media(max-width:560px){
+  .hero-stats{gap:1.5rem}.products-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}
+  .gallery-item.span-2{grid-column:span 1}.services-grid{grid-template-columns:1fr}
+  .cat-tab{font-size:0.62rem;padding:0.4rem 0.8rem}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#home" class="nav-logo">Eddy's<span>Home of Quality Curtains, Pillows &amp; Blinds</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#collections">Products</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMobile()">✕</button>
+  <a href="#home" onclick="toggleMobile()">Home</a>
+  <a href="#about" onclick="toggleMobile()">About</a>
+  <a href="#collections" onclick="toggleMobile()">Products</a>
+  <a href="#services" onclick="toggleMobile()">Services</a>
+  <a href="#gallery" onclick="toggleMobile()">Gallery</a>
+  <a href="#contact" onclick="toggleMobile()">Contact</a>
+</div>
+
+<section id="home">
+  <div class="hero-left">
+    <div class="hero-tag">In God We Trust</div>
+    <h1 class="hero-title">Curtains, Blinds<br>&amp; <em>Beautiful</em><br>Home Essentials</h1>
+    <p class="hero-sub">Eddy's is Nigeria's trusted source for curtains, blinds, pillows, bedsheets, poles, rings and everything your home needs. Precision-fitted. Beautifully made.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Get Free Measurement</a>
+      <a href="#collections" class="btn-outline">View Products</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+      <div><div class="stat-num">500+</div><div class="stat-label">Projects Done</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Client Satisfaction</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-grid">
+      <div class="hero-img-item"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Luxury living room curtains"></div>
+      <div class="hero-img-item"><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=800&q=80" alt="Elegant bedroom"></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Curtains</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Window Blinds</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Pillows &amp; Pillowcases</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bedsheets</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bedspreads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Curtain Poles</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Rings &amp; Hooks</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Measurement</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>In God We Trust</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Curtains</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Window Blinds</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Pillows &amp; Pillowcases</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bedsheets</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Bedspreads</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Curtain Poles</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Rings &amp; Hooks</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Free Measurement</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>In God We Trust</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="about-visual reveal">
+    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&q=80" alt="Interior installation" class="about-img-main">
+    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Curtain detail" class="about-img-accent">
+    <div class="about-badge"><span class="about-badge-num">10+</span><span class="about-badge-text">Years of Excellence</span></div>
+  </div>
+  <div class="reveal">
+    <div class="section-tag">Our Story</div>
+    <h2 class="section-title">Where Every Window<br>Tells a <em>Story</em></h2>
+    <div class="about-motto">In God We Trust — Eddy's</div>
+    <p class="section-sub">Born from a passion for beautiful homes, Eddy's has been supplying and installing quality curtains, blinds, bedding and home accessories across Nigeria for over a decade. One stop, no stress.</p>
+    <ul class="values-list">
+      <li>Premium fabrics and materials sourced from trusted suppliers</li>
+      <li>Every installation handled by our trained in-house team — never outsourced</li>
+      <li>Free in-home measurement and consultation on every curtain project</li>
+      <li>Post-installation follow-up and after-sales support</li>
+      <li>Serving homes, offices, schools and guesthouses across Nigeria</li>
+    </ul>
+  </div>
+</section>
+
+<section id="collections">
+  <div class="collections-header reveal">
+    <div class="section-tag">Our Products</div>
+    <h2 class="section-title">Everything Your Home<br><em>Needs</em></h2>
+    <p class="section-sub">Curtains, blinds, bedding, pillows, poles, rings and more — all from one trusted source.</p>
+  </div>
+  <div class="cat-tabs reveal">
+    <button class="cat-tab active" onclick="filterProducts('all',this)">All Products</button>
+    <button class="cat-tab" onclick="filterProducts('curtains',this)">Curtains</button>
+    <button class="cat-tab" onclick="filterProducts('blinds',this)">Blinds</button>
+    <button class="cat-tab" onclick="filterProducts('bedding',this)">Bedding</button>
+    <button class="cat-tab" onclick="filterProducts('pillows',this)">Pillows</button>
+    <button class="cat-tab" onclick="filterProducts('accessories',this)">Poles &amp; Rings</button>
+  </div>
+  <div class="products-grid" id="productsGrid">
+
+    <div class="product-card reveal" data-cat="curtains">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Luxury curtains">
+      <div class="product-overlay">
+        <div class="product-category">Curtains</div>
+        <div class="product-name">Luxury Curtains</div>
+        <div class="product-desc">Floor-to-ceiling elegance in premium velvet, linen and silk-blend fabrics. Available in all colours and sizes.</div>
+        <div class="product-features"><span class="feature-tag">Velvet</span><span class="feature-tag">Linen</span><span class="feature-tag">Silk Blend</span><span class="feature-tag">All Sizes</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="curtains">
+      <img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?w=600&q=80" alt="Blackout curtains">
+      <div class="product-overlay">
+        <div class="product-category">Curtains</div>
+        <div class="product-name">Blackout Curtains</div>
+        <div class="product-desc">Total light control for bedrooms and media rooms. Up to 99% light blockage without sacrificing style.</div>
+        <div class="product-features"><span class="feature-tag">99% Blackout</span><span class="feature-tag">Thermal</span><span class="feature-tag">All Sizes</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="curtains">
+      <img src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?w=600&q=80" alt="Sheer curtains">
+      <div class="product-overlay">
+        <div class="product-category">Curtains</div>
+        <div class="product-name">Sheer Curtains</div>
+        <div class="product-desc">Diffuse natural light beautifully while maintaining your privacy. Perfect for layering in any room.</div>
+        <div class="product-features"><span class="feature-tag">Voile</span><span class="feature-tag">Organza</span><span class="feature-tag">Custom Colour</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="blinds">
+      <img src="https://images.unsplash.com/photo-1618220048045-10a6dbdf83e0?w=600&q=80" alt="Window blinds">
+      <div class="product-overlay">
+        <div class="product-category">Blinds</div>
+        <div class="product-name">Window Blinds</div>
+        <div class="product-desc">Roller, venetian, zebra and vertical blinds for homes and offices. Clean, professional and functional.</div>
+        <div class="product-features"><span class="feature-tag">Roller</span><span class="feature-tag">Venetian</span><span class="feature-tag">Zebra</span><span class="feature-tag">Vertical</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="blinds">
+      <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=600&q=80" alt="Wooden blinds">
+      <div class="product-overlay">
+        <div class="product-category">Blinds</div>
+        <div class="product-name">Wooden Blinds</div>
+        <div class="product-desc">Real and faux wood venetian blinds that bring warmth and natural beauty to any space.</div>
+        <div class="product-features"><span class="feature-tag">Real Wood</span><span class="feature-tag">Faux Wood</span><span class="feature-tag">Natural Finish</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="bedding">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Bedsheets">
+      <div class="product-overlay">
+        <div class="product-category">Bedding</div>
+        <div class="product-name">Bedsheets</div>
+        <div class="product-desc">High-quality bedsheets in cotton, microfibre and satin. Available in all standard bed sizes and a wide range of colours.</div>
+        <div class="product-features"><span class="feature-tag">Cotton</span><span class="feature-tag">Microfibre</span><span class="feature-tag">Satin</span><span class="feature-tag">All Sizes</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="bedding">
+      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&q=80" alt="Bedspreads and duvets">
+      <div class="product-overlay">
+        <div class="product-category">Bedding</div>
+        <div class="product-name">Bedspreads &amp; Duvets</div>
+        <div class="product-desc">Luxurious bedspreads, duvets and comforters to complete your bedroom look. Warm, soft and stylish.</div>
+        <div class="product-features"><span class="feature-tag">Bedspread</span><span class="feature-tag">Duvet</span><span class="feature-tag">Comforter</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="pillows">
+      <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=600&q=80" alt="Pillows">
+      <div class="product-overlay">
+        <div class="product-category">Pillows</div>
+        <div class="product-name">Pillows</div>
+        <div class="product-desc">Sleeping pillows, throw pillows and decorative cushions. Various fills and firmness levels available.</div>
+        <div class="product-features"><span class="feature-tag">Sleeping Pillows</span><span class="feature-tag">Throw Pillows</span><span class="feature-tag">Cushions</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="pillows">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=80" alt="Pillowcases">
+      <div class="product-overlay">
+        <div class="product-category">Pillows</div>
+        <div class="product-name">Pillowcases</div>
+        <div class="product-desc">Plain, printed and embroidered pillowcases in all sizes. Sold individually and in sets. Matches available with our bedsheets.</div>
+        <div class="product-features"><span class="feature-tag">Plain</span><span class="feature-tag">Printed</span><span class="feature-tag">Embroidered</span><span class="feature-tag">Sets</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="accessories">
+      <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80" alt="Curtain poles">
+      <div class="product-overlay">
+        <div class="product-category">Accessories</div>
+        <div class="product-name">Curtain Poles</div>
+        <div class="product-desc">Metal, wooden and extendable curtain poles in various finishes — chrome, gold, black, white and brushed nickel.</div>
+        <div class="product-features"><span class="feature-tag">Metal</span><span class="feature-tag">Wooden</span><span class="feature-tag">Extendable</span><span class="feature-tag">All Finishes</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+    <div class="product-card reveal" data-cat="accessories">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Rings, hooks and tracks">
+      <div class="product-overlay">
+        <div class="product-category">Accessories</div>
+        <div class="product-name">Rings, Hooks &amp; Tracks</div>
+        <div class="product-desc">Curtain rings, hooks, gliders and tracks — all the fittings you need for a clean, professional finish.</div>
+        <div class="product-features"><span class="feature-tag">Rings</span><span class="feature-tag">Hooks</span><span class="feature-tag">Tracks</span><span class="feature-tag">Gliders</span></div>
+        <div class="product-cta"><span class="product-price">Request Quote</span><a href="#contact" class="product-btn">Enquire →</a></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="why">
+  <div class="why-grid">
+    <div class="why-visual reveal">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=700&q=80" alt="Premium curtain installation">
+      <div class="why-quote">
+        <p>"The quality of your curtains is the final word on the quality of your home."</p>
+        <cite>— Eddy's Principle</cite>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="section-tag">Why Eddy's</div>
+      <h2 class="section-title">The Eddy's<br><em>Difference</em></h2>
+      <ul class="features-list" style="margin-top:2rem;">
+        <li class="feature-item">
+          <div class="feature-num">01</div>
+          <div class="feature-content"><h4>Free Home Measurement</h4><p>We come to you. No guesswork, no returns. Every curtain is measured and made precisely for your windows.</p></div>
+        </li>
+        <li class="feature-item">
+          <div class="feature-num">02</div>
+          <div class="feature-content"><h4>In-House Installation</h4><p>Our trained team handles every installation — never subcontracted, always accountable.</p></div>
+        </li>
+        <li class="feature-item">
+          <div class="feature-num">03</div>
+          <div class="feature-content"><h4>One Stop Shop</h4><p>Curtains, blinds, bedding, pillows, poles, rings — everything in one place. No need to shop around.</p></div>
+        </li>
+        <li class="feature-item">
+          <div class="feature-num">04</div>
+          <div class="feature-content"><h4>After-Sales Support</h4><p>Adjustments and repairs available after installation. We don't disappear once the job is done. (Charges may apply.)</p></div>
+        </li>
+        <li class="feature-item">
+          <div class="feature-num">05</div>
+          <div class="feature-content"><h4>Trusted Across Nigeria</h4><p>500+ homes, offices and schools served. Our business runs on referrals — that tells you everything.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="reveal">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Complete Home &amp;<br>Interior <em>Services</em></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">⟐</div>
+      <div class="service-name">Curtain Supply &amp; Installation</div>
+      <p class="service-desc">We supply and professionally install all curtain types — tracks, poles, rings and ties. Clean, precise, same-day service.</p>
+      <a href="#contact" class="service-link">Book Now →</a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">⊕</div>
+      <div class="service-name">Free Home Measurement</div>
+      <p class="service-desc">We visit your space, measure every window, assess the light and recommend the perfect solution — all completely free.</p>
+      <a href="#contact" class="service-link">Book Now →</a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">✦</div>
+      <div class="service-name">Blind Supply &amp; Fitting</div>
+      <p class="service-desc">Roller, zebra, venetian, wooden and vertical blinds supplied and fitted for homes, offices, hotels and schools.</p>
+      <a href="#contact" class="service-link">Book Now →</a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">▣</div>
+      <div class="service-name">Bedding &amp; Pillow Supply</div>
+      <p class="service-desc">Bedsheets, pillowcases, pillows and duvets for homes, schools, guesthouses and hotels. Bulk orders welcome.</p>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">◎</div>
+      <div class="service-name">Poles, Rings &amp; Fittings</div>
+      <p class="service-desc">Full range of curtain poles, rings, hooks and tracks. We sell and install everything needed for a perfect, professional finish.</p>
+      <a href="#contact" class="service-link">Shop Now →</a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">⟡</div>
+      <div class="service-name">Interior Consultation</div>
+      <p class="service-desc">Not sure what works? We advise on colours, fabrics and styles — and how everything ties together for a complete, polished look.</p>
+      <a href="#contact" class="service-link">Book Now →</a>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="reveal">
+    <div class="section-tag">Installation Gallery</div>
+    <h2 class="section-title">Our Work Speaks<br>for <em>Itself</em></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item span-2 span-row-2 reveal">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=80" alt="Living room curtains">
+      <div class="gallery-label">Living Room — Victoria Island</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=80" alt="Bedroom curtains">
+      <div class="gallery-label">Master Bedroom — Lekki</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Sheer curtains">
+      <div class="gallery-label">Open Plan — Ikoyi</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Bedroom bedding">
+      <div class="gallery-label">Bedding Setup — Gbagada</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1618220048045-10a6dbdf83e0?w=600&q=80" alt="Office blinds">
+      <div class="gallery-label">Office Blinds — Lagos Island</div>
+    </div>
+    <div class="gallery-item span-2 reveal">
+      <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&q=80" alt="Full room setup">
+      <div class="gallery-label">Full Room — Ajah</div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="reveal">
+    <div class="section-tag">Client Testimonials</div>
+    <h2 class="section-title">What Our Clients<br><em>Say</em></h2>
+  </div>
+  <div class="testimonials-wrapper reveal" style="margin-top:3rem;">
+    <div class="testimonials-track" id="testimonialsTrack">
+      <div class="testimonial-card">
+        <div>
+          <span class="testimonial-marks">"</span>
+          <blockquote class="testimonial-quote">Eddy's transformed my home completely. The curtains are stunning and the bedsheets are the softest I've ever owned. From measurement to delivery — everything was seamless.</blockquote>
+          <div class="testimonial-author" style="margin-top:2rem;">
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Chidinma Okafor</div>
+            <div class="author-loc">Lekki Phase 1, Lagos</div>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Client installation" class="testimonial-img">
+      </div>
+      <div class="testimonial-card">
+        <div>
+          <span class="testimonial-marks">"</span>
+          <blockquote class="testimonial-quote">Ordered office blinds, curtains and bulk bedding for our guesthouse from Eddy's. Professional, punctual and the quality is top class. This is the only call you need to make.</blockquote>
+          <div class="testimonial-author" style="margin-top:2rem;">
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Emeka Nwosu</div>
+            <div class="author-loc">Victoria Island, Lagos</div>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1618220048045-10a6dbdf83e0?w=600&q=80" alt="Office installation" class="testimonial-img">
+      </div>
+      <div class="testimonial-card">
+        <div>
+          <span class="testimonial-marks">"</span>
+          <blockquote class="testimonial-quote">Got curtains, poles, rings, pillows and bedsheets — all from Eddy's. One stop, zero stress. Everything matched perfectly and the installation was flawless. Worth every naira.</blockquote>
+          <div class="testimonial-author" style="margin-top:2rem;">
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Adaeze Williams</div>
+            <div class="author-loc">Ikoyi, Lagos</div>
+          </div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=600&q=80" alt="Full room" class="testimonial-img">
+      </div>
+    </div>
+    <div class="testimonials-nav">
+      <div class="nav-dot active" onclick="goToSlide(0)"></div>
+      <div class="nav-dot" onclick="goToSlide(1)"></div>
+      <div class="nav-dot" onclick="goToSlide(2)"></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="faq-layout">
+    <div class="reveal">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Common<br><em>Questions</em></h2>
+      <p class="section-sub" style="margin-top:1rem;">Can't find your answer? Chat with us on WhatsApp — we reply within minutes.</p>
+      <a href="https://wa.me/2348033003328" class="btn-primary" style="margin-top:2rem;display:inline-block;">Chat on WhatsApp</a>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you offer free measurement? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes — completely free. We visit your home or office, measure every window precisely and give you a no-obligation quote. No hidden charges.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you sell bedsheets, pillows and pillowcases? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. We stock bedsheets, pillowcases, pillows, duvets and bedspreads for homes, schools, hotels and guesthouses. Bulk orders are welcome — contact us for pricing.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you sell curtain poles and rings? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes — poles, rings, hooks and tracks in various finishes. We sell them separately or as part of a full installation package.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How long does installation take? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Most homes are completed in a single day. Large or multi-room projects may take 2 days. We give you a clear timeline upfront.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I supply my own fabric? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. Bring your fabric and we handle the making, lining, heading and installation. We'll advise if the fabric won't suit the style you want.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do you serve schools and commercial properties? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Absolutely. We supply and install for schools, offices, hotels and guesthouses. Bulk orders for bedding, curtains and blinds are welcome — call or WhatsApp us.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="cta-banner-text">
+    <h2>Ready to Transform<br>Your Space?</h2>
+    <p>Book your free measurement today — no obligation, no pressure.</p>
+  </div>
+  <a href="#contact" class="btn-dark">Get Free Measurement</a>
+</div>
+
+<section id="contact">
+  <div class="reveal">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's Work<br><em>Together</em></h2>
+  </div>
+  <div class="contact-layout">
+    <div class="reveal">
+      <h3>Contact Eddy's</h3>
+      <div class="contact-item">
+        <div class="contact-item-icon">✆</div>
+        <div><div class="contact-item-label">Phone / WhatsApp</div><div class="contact-item-value">+234 803 300 3328</div></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">@</div>
+        <div><div class="contact-item-label">Email</div><div class="contact-item-value">chigozieedwin048@gmail.com</div></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">◎</div>
+        <div><div class="contact-item-label">Location</div><div class="contact-item-value">Lagos, Nigeria<br><span style="font-size:0.8rem;color:var(--warm-gray)">Serving homes and businesses across Nigeria</span></div></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">◷</div>
+        <div><div class="contact-item-label">Business Hours</div><div class="contact-item-value">Mon – Sat: 8am – 6pm<br><span style="font-size:0.8rem;color:var(--warm-gray)">Sunday: By appointment only</span></div></div>
+      </div>
+      <a href="https://wa.me/2348033003328" class="btn-primary" style="margin-top:2rem;display:inline-flex;align-items:center;gap:0.8rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 0C5.364 0 0 5.373 0 12.003c0 2.117.554 4.1 1.522 5.825L0 24l6.335-1.502A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12.003-12-12.003zm0 21.818a9.82 9.82 0 01-5.006-1.367l-.357-.213-3.724.882.916-3.61-.233-.368A9.793 9.793 0 012.182 12c0-5.42 4.397-9.82 9.81-9.82C17.4 2.18 21.8 6.58 21.8 12c0 5.42-4.398 9.818-9.81 9.818z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+    <form class="contact-form reveal" onsubmit="submitForm(event)">
+      <div class="form-row">
+        <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" placeholder="Your first name" required></div>
+        <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Your last name"></div>
+      </div>
+      <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="Your email" required></div>
+      <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="Phone number"></div>
+      <div class="form-group">
+        <label for="service">What Are You Interested In?</label>
+        <select id="service">
+          <option value="" disabled selected>Select a product or service...</option>
+          <optgroup label="Curtains">
+            <option>Luxury Curtains</option>
+            <option>Blackout Curtains</option>
+            <option>Sheer Curtains</option>
+            <option>Custom Curtain Design</option>
+          </optgroup>
+          <optgroup label="Blinds">
+            <option>Window Blinds (Roller / Zebra / Venetian)</option>
+            <option>Wooden Blinds</option>
+            <option>Vertical Blinds</option>
+          </optgroup>
+          <optgroup label="Bedding">
+            <option>Bedsheets</option>
+            <option>Bedspreads / Duvets</option>
+          </optgroup>
+          <optgroup label="Pillows">
+            <option>Pillows</option>
+            <option>Pillowcases</option>
+          </optgroup>
+          <optgroup label="Accessories">
+            <option>Curtain Poles</option>
+            <option>Rings / Hooks / Tracks</option>
+          </optgroup>
+          <optgroup label="Services">
+            <option>Free Home Measurement</option>
+            <option>Installation Service</option>
+            <option>Interior Consultation</option>
+            <option>Bulk / Commercial Order</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us what you need — room size, preferred colours, timeline, quantity..."></textarea></div>
+      <button type="submit" class="form-submit">Send Enquiry →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">Eddy's<span>Home of Quality Curtains, Pillows &amp; Blinds</span></a>
+      <p>Premium curtains, blinds, pillows, bedsheets and accessories for homes, offices and schools across Nigeria. Crafted with care. Installed with precision.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+        <a href="#" class="social-link" aria-label="Facebook">FB</a>
+        <a href="#" class="social-link" aria-label="Twitter/X">𝕏</a>
+        <a href="#" class="social-link" aria-label="TikTok">TK</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#collections">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Products</h4>
+      <ul>
+        <li><a href="#collections">Curtains</a></li>
+        <li><a href="#collections">Window Blinds</a></li>
+        <li><a href="#collections">Bedsheets</a></li>
+        <li><a href="#collections">Pillows &amp; Pillowcases</a></li>
+        <li><a href="#collections">Bedspreads &amp; Duvets</a></li>
+        <li><a href="#collections">Poles, Rings &amp; Fittings</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p style="font-size:0.8rem;color:var(--warm-gray);line-height:1.6;margin-bottom:1rem;">New arrivals, design tips and exclusive deals — straight to your inbox.</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Your email" aria-label="Email for newsletter">
+        <button type="button">Join</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Eddy's Curtains, Blinds &amp; Home Essentials. All rights reserved.</p>
+    <p class="footer-motto">In God We Trust — Home of Quality Curtains, Pillows &amp; Blinds</p>
+    <p style="font-size:0.7rem;">Nigeria</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348033003328" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <div class="wa-pulse"></div>
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M11.99 0C5.364 0 0 5.373 0 12.003c0 2.117.554 4.1 1.522 5.825L0 24l6.335-1.502A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12.003-12-12.003zm0 21.818a9.82 9.82 0 01-5.006-1.367l-.357-.213-3.724.882.916-3.61-.233-.368A9.793 9.793 0 012.182 12c0-5.42 4.397-9.82 9.81-9.82C17.4 2.18 21.8 6.58 21.8 12c0 5.42-4.398 9.818-9.81 9.818z"/>
+  </svg>
+</a>
+
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+function toggleMobile(){const m=document.getElementById('mobileMenu');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+const observer=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);observer.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+function filterProducts(cat,btn){
+  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card=>{
+    (cat==='all'||card.dataset.cat===cat)?card.classList.remove('hidden'):card.classList.add('hidden');
+  });
+}
+let currentSlide=0;
+const track=document.getElementById('testimonialsTrack');
+const dots=document.querySelectorAll('.nav-dot');
+function goToSlide(n){currentSlide=n;track.style.transform=`translateX(-${n*100}%)`;dots.forEach((d,i)=>d.classList.toggle('active',i===n));}
+setInterval(()=>goToSlide((currentSlide+1)%3),5000);
+function toggleFaq(btn){const a=btn.nextElementSibling;const open=a.classList.contains('open');document.querySelectorAll('.faq-a.open').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.faq-q.open').forEach(x=>x.classList.remove('open'));if(!open){a.classList.add('open');btn.classList.add('open');}}
+function submitForm(e){e.preventDefault();const btn=e.target.querySelector('.form-submit');btn.textContent='Sending...';setTimeout(()=>{btn.textContent='✓ Sent! We\'ll contact you shortly.';btn.style.background='#2E7D32';btn.style.color='#fff';},1200);}
+</script>
+</body>
+</html>
